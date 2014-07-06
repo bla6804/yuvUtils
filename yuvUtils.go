@@ -206,7 +206,7 @@ func Merge4(frame1, frame2, frame3, frame4, frameMerged *MyYCbCr) error {
 	}
 
 	// frame 2 => top right
-	for line := 0; line < frame1.Rect.Dy(); line++ {
+	for line := 0; line < frame2.Rect.Dy(); line++ {
 		dStart := line*frameMerged.YStride + frame1.YStride
 		dStop := dStart + frame2.YStride
 		sStart := line * frame2.YStride
